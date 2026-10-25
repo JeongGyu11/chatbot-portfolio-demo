@@ -11,7 +11,7 @@
 - [x] Browser checked at desktop and mobile widths.
 - [ ] Confirm the original company repository is private through the owner's account (handled separately by the owner).
 - [x] Create this separate repository using an authenticated GitHub account.
-- [ ] Verify the public remote contents after upload.
+- [x] Verify public remote contents against the local commit (14 files, byte-for-byte match).
 
 Publication of this independent example does not authorize publication of the original company's code or materials.
 This checklist is a scoped review, not a guarantee that previously published original material has been recovered.

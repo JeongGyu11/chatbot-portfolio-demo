@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Grounded Workspace | Portfolio Demo</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+  <header><div class="brand"><span class="brand-mark">G</span><div><strong>Grounded Workspace</strong><small>업무 검색 · 독립 포트폴리오 데모</small></div></div><span class="badge">가상 데이터 전용</span></header>
+  <div class="notice">회사·고객 자료 없이 새로 구성한 예제입니다. 실제 LLM을 호출하지 않으며, 검색 근거 기반 응답과 오류 처리 흐름을 보여줍니다.</div>
+  <main>
+    <aside><h2>검증 시나리오</h2><label for="user">데모 사용자</label><select id="user"><option value="member">일반 구성원</option><option value="reviewer">검토 담당자</option></select><p class="hint">사용자 전환은 권한 필터 시연용이며 실제 인증이 아닙니다.</p><label for="mode">응답 시나리오</label><select id="mode"><option value="retrieval">정상 검색</option><option value="outage">생성 서비스 장애</option><option value="invalid-citation">잘못된 인용 응답</option></select><h3>예시 질문</h3><div id="examples"></div><section class="scope"><h3>확인할 기능</h3><ul><li>문서 검색 / 업무 조회 분기</li><li>조항·버전·출처 표시</li><li>후속 질문 문맥 반영</li><li>권한별 자료 필터</li><li>실패 시 근거 안내</li></ul></section></aside>
+    <section class="workspace"><div class="toolbar"><div><h1>업무 도우미</h1><p id="status">세션 준비 중</p></div><button id="reset" title="대화 초기화" aria-label="대화 초기화">↻</button></div><div id="messages" aria-live="polite"><div class="empty"><span class="document-icon">≡</span><h2>필요한 업무 정보를 찾아보세요</h2><p>휴가·교육비 문서와 검토 업무를 조회할 수 있습니다.</p></div></div><form id="ask"><label class="sr-only" for="question">질문</label><textarea id="question" rows="2" maxlength="1000" placeholder="교육비 지원 한도가 얼마인가요?" required></textarea><button id="send" type="submit" title="질문 보내기" aria-label="질문 보내기">↑</button></form><div class="footnote">원문을 확인하고 판단하세요. 대화와 평가는 임시 메모리에만 보관됩니다.</div></section>
+  </main><dialog id="document"><div class="dialog-head"><h2 id="doc-title"></h2><button id="close-doc" aria-label="원문 닫기" title="닫기">×</button></div><div id="doc-body"></div></dialog>
+</body></html>

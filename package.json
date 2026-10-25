@@ -1,0 +1,9 @@
+{
+  "name": "grounded-workspace-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent chatbot portfolio demo with fictional data only",
+  "scripts": { "start": "node server.mjs", "test": "node --test", "check": "node --check server.mjs && node --check src/assistant.mjs && node --check public/app.js" },
+  "engines": { "node": ">=22" }
+}
